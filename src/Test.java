@@ -12,22 +12,39 @@
 //Easy to translate.
 
 //Constructors needed:
-//Player/coins (start 1000)/name
+//Player/coins (start 1000)/name-done
 
-//methods to Player:
+//methods to Player - done:
 //get/set coins
 //get/set names
 
 
-
+import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
-        Dice d1 = new Dice(6);
+        Scanner input = new Scanner(System.in);
+
+        /*Dice d1 = new Dice(6);
         Dice d2 = new Dice (6);
 
         d1.rollDice();
 
-        System.out.println(d1.getEyes());
+        System.out.println(d1.getEyes());*/
+        System.out.print("Type in player 1's name: ");
+        Player p1 = new Player(input.nextLine());
+        System.out.println(p1.getName());
+
+        System.out.println(p1.getCoins());
+        System.out.print("new coin: ");
+        p1.setCoins(input.nextInt());
+        System.out.println(p1.getCoins());
+
+        System.out.print("change coin: ");
+        p1.changeCoins(input.nextInt());
+        System.out.println(p1.getCoins());
+
+
+
 
 
 
