@@ -24,12 +24,12 @@ public class Test {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        /*Dice d1 = new Dice(6);
+        Dice d1 = new Dice(6);
         Dice d2 = new Dice (6);
 
         d1.rollDice();
 
-        System.out.println(d1.getEyes());*/
+        System.out.println(d1.getEyes());
         System.out.print("Type in player 1's name: ");
         Player p1 = new Player(input.nextLine());
         System.out.println(p1.getName());
