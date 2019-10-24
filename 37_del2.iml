@@ -8,10 +8,10 @@
     <content url="jar://$USER_HOME$/Downloads/SelfLibrary.jar!/" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/SelfLibrary.jar!/" />
+          <root url="jar://$MODULE_DIR$/libraries/SelfLibrary_dice.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
