@@ -19,7 +19,6 @@ public class Game {
         d2.rollDice();
 
 
-
         switch (d1.getEyes()+d2.getEyes()){
             case 2:
                 p1.changeCoins(250);
