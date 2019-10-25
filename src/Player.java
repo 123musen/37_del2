@@ -9,27 +9,27 @@
 public class Player {
 
     private String name;
-    private int coins = 1000;
+    private Account account;
 
 
     //constructor
     public Player(String name){
             this.name = name;
+            //creating an account from the Class Account
+            account = new Account();
     }
 
+    //method
     public String getName(){
         return name;
     }
 
-    public void setCoins(int coins){
-        this.coins = coins;
+
+
+    //returns a reference to class "Account" (method)
+    public Account getAccount(){
+        return account;
     }
 
-    public void changeCoins(int change){
-        coins = coins + change;
-    }
 
-    public int getCoins() {
-        return coins;
-    }
 }
