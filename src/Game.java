@@ -15,10 +15,12 @@ public class Game {
         Player p2 = new Player(scan.nextLine());
 
 
-
-
+        System.out.println("Press enter to start");
         while (!scan.nextLine().equalsIgnoreCase("Q")) {
+            System.out.println("Player 1. Press enter for turn");
             System.out.println(Turn(p1, d1, d2));
+            System.out.println("Player 2. Press enter for turn");
+            scan.nextLine();
             System.out.println(Turn(p2, d1, d2));
 
         }
