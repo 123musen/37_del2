@@ -1,32 +1,54 @@
+//Study group 37 CDIO part 2, last edited 21.10.2019
+//Sejr Abildgaard s195481
+//Silas Rindorf s195474
+//Betina Hansen s195389
+//Morten Kruuse s183681
+
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 //TODO Explanation for game, Player turn
 
-public class Game {
+class Game {
 
-    public void Round() {
+    void Round() {
         Scanner scan = new Scanner(System.in);
 
-        Dice d1 = new Dice(6);
-        Dice d2 = new Dice(6);
+        System.out.println("Choose language: Danish, English");
+        String language = scan.nextLine();
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(
+                    new FileInputStream("src\\language\\"+ language.toUpperCase()+
+                            "\\"+ language.toLowerCase()+ ".txt")));
+            Dice d1 = new Dice(6);
+            Dice d2 = new Dice(6);
 
-        System.out.print("Input Player 1 name: ");
-        Player p1 = new Player(scan.nextLine());
+            System.out.print(br.readLine() + " ");
+            Player p1 = new Player(scan.nextLine());
 
-        System.out.print("Input Player 2 name: ");
-        Player p2 = new Player(scan.nextLine());
+            System.out.print(br.readLine() + " ");
+            Player p2 = new Player(scan.nextLine());
 
-
-        while (true) {
-            System.out.print("\nPlayer 1. Press enter for turn");
-            if (scan.nextLine().equalsIgnoreCase("Q")){
-                return;
+            System.out.println(br.readLine());
+            br.mark(100);
+            while (true) {
+                br.reset();
+                System.out.print("\n" + p1.getName() + " " + br.readLine());
+                if (scan.nextLine().equalsIgnoreCase("Q")) {
+                    return;
+                }
+                Turn(p1, d1, d2);
+                br.reset();
+                System.out.print("\n" + p2.getName() + " " + br.readLine());
+                scan.nextLine();
+                Turn(p2, d1, d2);
             }
-            Turn(p1, d1, d2);
-            System.out.print("\nPlayer 2. Press enter for turn");
-            scan.nextLine();
-            Turn(p2, d1, d2);
+        } catch (Exception ignored) {
+            System.out.println("Error");
         }
     }
+
     private void Turn(Player player, Dice dice1, Dice dice2) {
         dice1.rollDice();
         dice2.rollDice();

@@ -1,0 +1,5 @@
+Indtast spiller 1s navn:
+Indtast spiller 2s navn:
+Tryk "Q" for at afslutte spillet
+Tryk enter for ny tur
+
