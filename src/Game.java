@@ -23,13 +23,8 @@ class Game {
                             "\\"+ language.toLowerCase()+ ".txt"))));
             //new FileInputStream
             int x = 0;
-            while(true){
-
-                String temp = br.readLine();
-                if (temp == null)
-                    break;
-                else
-                    text[x] = temp;
+            for (String line;  (line = br.readLine()) != null;) {
+                text[x] = line;
                 x++;
             }
             System.out.println(text[3]);
@@ -82,34 +77,34 @@ class Game {
                 break;
             case 6:
                 player.getAccount().changeCoins(180);
-                System.out.println("Walled city +180. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[9]+ text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 7:
                 player.getAccount().changeCoins(0);
-                System.out.println("Monastary 0. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[10] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 8:
                 player.getAccount().changeCoins(-70);
-                System.out.println("Black Cave -70. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[11] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 9:
                 player.getAccount().changeCoins(60);
-                System.out.println("Huts in the Mountain +60. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[12] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 10:
                 player.getAccount().changeCoins(-80);
-                System.out.println("The Werewolf-Wall -80. Total coins: " + player.getAccount().getCoins());
-                System.out.print("roll again (press enter)");
+                System.out.println(text[13] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.print(text[14]);
                 scan.nextLine();
                 Turn(player, dice1, dice2);
                 break;
             case 11:
                 player.getAccount().changeCoins(-50);
-                System.out.println("The Pit -50. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[15] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 12:
                 player.getAccount().changeCoins(650);
-                System.out.println("Goldmine +650. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[16] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             default:
                 System.out.println("Error");
