@@ -4,6 +4,7 @@
 //Betina Hansen s195389
 //Morten Kruuse s183681
 
+import java.io.File;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,41 +12,49 @@ import java.io.InputStreamReader;
 //TODO Explanation for game, Player turn
 
 class Game {
-
+    private String[] text = new String[20];
     void Round() {
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Choose language: Danish, English");
         String language = scan.nextLine();
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(
-                    new FileInputStream("src\\language\\"+ language.toUpperCase()+
-                            "\\"+ language.toLowerCase()+ ".txt")));
+                    (Main.class.getResourceAsStream("\\language\\"+ language.toUpperCase()+
+                            "\\"+ language.toLowerCase()+ ".txt"))));
+            //new FileInputStream
+            int x = 0;
+            while(true){
+
+                String temp = br.readLine();
+                if (temp == null)
+                    break;
+                else
+                    text[x] = temp;
+                x++;
+            }
+            System.out.println(text[3]);
             Dice d1 = new Dice(6);
             Dice d2 = new Dice(6);
 
-            System.out.print(br.readLine() + " ");
+            System.out.print(text[0] + " ");
             Player p1 = new Player(scan.nextLine());
 
-            System.out.print(br.readLine() + " ");
+            System.out.print(text[1] + " ");
             Player p2 = new Player(scan.nextLine());
 
-            System.out.println(br.readLine());
-            br.mark(100);
+            System.out.println(text[2]);
             while (true) {
-                br.reset();
-                System.out.print("\n" + p1.getName() + " " + br.readLine());
+                System.out.print("\n" + p1.getName() + " " + text[3]);
                 if (scan.nextLine().equalsIgnoreCase("Q")) {
                     return;
                 }
                 Turn(p1, d1, d2);
-                br.reset();
-                System.out.print("\n" + p2.getName() + " " + br.readLine());
+                System.out.print("\n" + p2.getName() + " " + text[3]);
                 scan.nextLine();
                 Turn(p2, d1, d2);
             }
         } catch (Exception ignored) {
-            System.out.println("Error");
+            System.out.println("Error: " + ignored);
         }
     }
 
@@ -57,19 +66,19 @@ class Game {
             //p1 is an object that calls the class "Account" and calls the method "changeCoins()"
             case 2:
                 player.getAccount().changeCoins(250);
-                System.out.println("Tower +250. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[5] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 3:
                 player.getAccount().changeCoins(-100);
-                System.out.println("Crater -100. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[6] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 4:
                 player.getAccount().changeCoins(100);
-                System.out.println("Palace Gates +100. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[7] + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 5:
                 player.getAccount().changeCoins(-20);
-                System.out.println("Cold Desert -20. Total coins: " + player.getAccount().getCoins());
+                System.out.println(text[8] + text[4]+ " "  + player.getAccount().getCoins());
                 break;
             case 6:
                 player.getAccount().changeCoins(180);
