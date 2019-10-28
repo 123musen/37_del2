@@ -2,4 +2,5 @@ Indtast spiller 1s navn:
 Indtast spiller 2s navn:
 Tryk "Q" for at afslutte spillet
 Tryk enter for ny tur
-
+Du har:
+Du lander på felt "2" og støder på et tårn med en kiste guld og får 250 mønter. 
