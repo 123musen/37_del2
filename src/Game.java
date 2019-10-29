@@ -45,13 +45,13 @@ class Game {
                 }
                 Turn(p1, d1, d2);
                 if (Victory(p1)){
-                    break;
+                    return;
                 }
                 System.out.print("\n" + p2.getName() + " " + text[3]);
                 scan.nextLine();
                 Turn(p2, d1, d2);
                 if (Victory(p2)){
-                    break;
+                    return;
                 }
             }
         } catch (Exception e) {
