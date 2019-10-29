@@ -14,7 +14,7 @@ class Game {
     private String[] text = new String[20];
     void Round() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Choose language: Danish, English");
+        System.out.println("Choose language: Danish, English, Spanish");
         String language = scan.nextLine();
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(
