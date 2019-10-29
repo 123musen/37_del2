@@ -3,15 +3,16 @@ Indtast spiller 2s navn:
 Tryk "Q" for at afslutte spillet
 Tryk enter for ny tur
 Du har:
-Du lander på felt "2" og støder på et tårn med en kiste guld. Du får 250 mønter.
-Du falder i et krater og skal betale 100 mønter på en trylledrik.
-Du ankommer til Paladset og modtager en gave på 100 mønter.
-Du er faret vil og er havnet i Den Kolde Ørken. Du bruger 20 mønter på en hue.
-Du har fundet en by gemt bag nogle vægge. Du får 200 velkomstdrinks, hvoraf du drikker de 20 og sælger resten for 180 mønter.
-Du finder et kloster, hvor du tilbringer en nat. Ingen ændring i mønter.
-Du er faldet i Den Sorte Grotte. du betaler en ildflue 70 mønter for at vise dig ud ad grotten.
-Du finder nogle hytter i bjergene, hvor du sælger din hue for 60 mønter.
-Du ankommer til Vareulvsvæggen, hvor du slår en bøvs og vækker dem. Du kaster alt dit kød til en værdi på 80 mønter.
+Du lander pï¿½ felt "2" og stï¿½der pï¿½ et tï¿½rn med en kiste guld. Du fï¿½r 250 mï¿½nter.
+Du falder i et krater og skal betale 100 mï¿½nter pï¿½ en trylledrik.
+Du ankommer til Paladset og modtager en gave pï¿½ 100 mï¿½nter.
+Du er faret vil og er havnet i Den Kolde ï¿½rken. Du bruger 20 mï¿½nter pï¿½ en hue.
+Du har fundet en by gemt bag nogle vï¿½gge. Du fï¿½r 200 velkomstdrinks, hvoraf du drikker de 20 og sï¿½lger resten for 180 mï¿½nter.
+Du finder et kloster, hvor du tilbringer en nat. Ingen ï¿½ndring i mï¿½nter.
+Du er faldet i Den Sorte Grotte. du betaler en ildflue 70 mï¿½nter for at vise dig ud ad grotten.
+Du finder nogle hytter i bjergene, hvor du sï¿½lger din hue for 60 mï¿½nter.
+Du ankommer til Vareulvsvï¿½ggen, hvor du slï¿½r en bï¿½vs og vï¿½kker dem. Du kaster alt dit kï¿½d til en vï¿½rdi pï¿½ 80 mï¿½nter.
 Kast igen (tryk enter).
-Du finder et hul med 50 zombier. Du kaster 50 mønter for at beskæftige dem med noget andet.
-Du ankommer til en guldmine og finder guld til en værdi af 650 mønter.
+Du finder et hul med 50 zombier. Du kaster 50 mï¿½nter for at beskï¿½ftige dem med noget andet.
+Du ankommer til en guldmine og finder guld til en vï¿½rdi af 650 mï¿½nter.
+Har vundet!
