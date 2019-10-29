@@ -10,8 +10,6 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-//TODO Explanation for game, Player turn
-
 class Game {
     private String[] text = new String[20];
     void Round() {
@@ -29,8 +27,6 @@ class Game {
                 x++;
             }
             System.out.println(text[3]);
-            Dice d1 = new Dice(6);
-            Dice d2 = new Dice(6);
 
             System.out.print(text[0] + " ");
             Player p1 = new Player(scan.nextLine());
@@ -44,16 +40,17 @@ class Game {
                 if (scan.nextLine().equalsIgnoreCase("Q")) {
                     break;
                 }
-                Turn(p1, d1, d2);
+                Turn(p1);
                 if (Victory(p1)){
                     return;
                 }
                 System.out.print("\n" + p2.getName() + " " + text[3]);
                 scan.nextLine();
-                Turn(p2, d1, d2);
+                Turn(p2);
                 if (Victory(p2)){
                     return;
                 }
+                p1.swapDices(p2);
             }
         } catch (Exception e) {
             System.out.println("Error: " + e);
@@ -67,11 +64,11 @@ class Game {
         return bool;
     }
 
-    private void Turn(Player player, Dice dice1, Dice dice2) {
-        dice1.rollDice();
-        dice2.rollDice();
+    private void Turn(Player player) {
+        player.getDice()[0].rollDice();
+        player.getDice()[1].rollDice();
         Scanner scan = new Scanner(System.in);
-        switch (dice1.getEyes() + dice2.getEyes()) {
+        switch (player.getDice()[0].getEyes() + player.getDice()[1].getEyes()) {
             //p1 is an object that calls the class "Account" and calls the method "changeCoins()"
             case 2:
                 player.getAccount().changeCoins(250);
@@ -110,7 +107,7 @@ class Game {
                 System.out.println(text[13]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 System.out.print(text[14]);
                 scan.nextLine();
-                Turn(player, dice1, dice2);
+                Turn(player);
                 break;
             case 11:
                 player.getAccount().changeCoins(-50);
