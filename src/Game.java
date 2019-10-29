@@ -4,15 +4,13 @@
 //Betina Hansen s195389
 //Morten Kruuse s183681
 
-import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
 class Game {
     private String[] text = new String[20];
-    void Round() {
+    void round() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Choose language: Danish, English, Spanish");
         String language = scan.nextLine();
@@ -40,14 +38,14 @@ class Game {
                 if (scan.nextLine().equalsIgnoreCase("Q")) {
                     break;
                 }
-                Turn(p1);
-                if (Victory(p1)){
+                turn(p1);
+                if (victory(p1)){
                     return;
                 }
                 System.out.print("\n" + p2.getName() + " " + text[3]);
                 scan.nextLine();
-                Turn(p2);
-                if (Victory(p2)){
+                turn(p2);
+                if (victory(p2)){
                     return;
                 }
                 p1.swapDices(p2);
@@ -56,7 +54,7 @@ class Game {
             System.out.println("Error: " + e);
         }
     }
-    private boolean Victory(Player player){
+    private boolean victory(Player player){
         boolean bool = player.getAccount().getCoins() >= 3000;
         if (bool){
             System.out.println(text[4]+ " " + player.getAccount().getCoins() + " " + text[17]);
@@ -64,7 +62,7 @@ class Game {
         return bool;
     }
 
-    private void Turn(Player player) {
+    private void turn(Player player) {
         player.getDice()[0].rollDice();
         player.getDice()[1].rollDice();
         Scanner scan = new Scanner(System.in);
@@ -107,7 +105,7 @@ class Game {
                 System.out.println(text[13]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 System.out.print(text[14]);
                 scan.nextLine();
-                Turn(player);
+                turn(player);
                 break;
             case 11:
                 player.getAccount().changeCoins(-50);
