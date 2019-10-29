@@ -9,11 +9,13 @@ public class Account {
 
 
     public void setCoins(int coins){
-        this.coins = coins;
+        if(!(coins < 0) )this.coins = coins;
+        else this.coins = 0;
     }
 
     public void changeCoins(int change){
-        coins = coins + change;
+        if (!(coins + change < 0)){coins += change;}
+        else coins = 0;
     }
 
     public int getCoins() {
