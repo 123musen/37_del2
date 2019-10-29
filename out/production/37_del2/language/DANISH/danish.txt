@@ -3,16 +3,16 @@ Indtast spiller 2s navn:
 Tryk "Q" for at afslutte spillet
 Tryk enter for ny tur
 Du har:
-Du lander p� felt "2" og st�der p� et t�rn med en kiste guld. Du f�r 250 m�nter.
-Du falder i et krater og skal betale 100 m�nter p� en trylledrik.
-Du ankommer til Paladset og modtager en gave p� 100 m�nter.
-Du er faret vil og er havnet i Den Kolde �rken. Du bruger 20 m�nter p� en hue.
-Du har fundet en by gemt bag nogle v�gge. Du f�r 200 velkomstdrinks, hvoraf du drikker de 20 og s�lger resten for 180 m�nter.
-Du finder et kloster, hvor du tilbringer en nat. Ingen �ndring i m�nter.
-Du er faldet i Den Sorte Grotte. du betaler en ildflue 70 m�nter for at vise dig ud ad grotten.
-Du finder nogle hytter i bjergene, hvor du s�lger din hue for 60 m�nter.
-Du ankommer til Vareulvsv�ggen, hvor du sl�r en b�vs og v�kker dem. Du kaster alt dit k�d til en v�rdi p� 80 m�nter.
+Du lander på felt "2" og støder på et tårn med en kiste guld. Du får 250 mønter.
+Du falder i et krater og skal betale 100 mønter på en trylledrik.
+Du ankommer til Paladset og modtager en gave på 100 mønter.
+Du er faret vil og er havnet i Den Kolde ørken. Du bruger 20 mønter på en hue.
+Du har fundet en by gemt bag nogle vægge. Du får 200 velkomstdrinks, hvoraf du drikker de 20 og sælger resten for 180 mønter.
+Du finder et kloster, hvor du tilbringer en nat. Ingen ændring i mønter.
+Du er faldet i Den Sorte Grotte. du betaler en ildflue 70 mønter for at vise dig ud ad grotten.
+Du finder nogle hytter i bjergene, hvor du sælger din hue for 60 mønter.
+Du ankommer til Vareulvsvæggen, hvor du slår en bøvs og vækker dem. Du kaster alt dit kød til en værdi på 80 mønter.
 Kast igen (tryk enter).
-Du finder et hul med 50 zombier. Du kaster 50 m�nter for at besk�ftige dem med noget andet.
-Du ankommer til en guldmine og finder guld til en v�rdi af 650 m�nter.
-Har vundet!
+Du finder et hul med 50 zombier. Du kaster 50 mønter for at beskæftige dem med noget andet.
+Du ankommer til en guldmine og finder guld til en værdi af 650 mønter.
+og har vundet!

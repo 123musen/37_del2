@@ -15,4 +15,4 @@ You arrive to the Werewolf Wall. You burp and the werewolves wake up. You throw 
 Roll again (press enter).
 You find a pit with 50 zombies. You throw 50 coins to keep them occupied.
 You arrive to a goldmine and find gold worth 650 coins.
-Has won!
+coins and have won!

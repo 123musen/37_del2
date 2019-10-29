@@ -59,9 +59,9 @@ class Game {
         }
     }
     private boolean Victory(Player player){
-        boolean bool = player.getAccount().getCoins() == 3000;
+        boolean bool = player.getAccount().getCoins() >= 3000;
         if (bool){
-            System.out.println(player.getName() + " " + text[17]);
+            System.out.println(text[4]+ " " + player.getAccount().getCoins() + " " + text[17]);
         }
         return bool;
     }
@@ -74,50 +74,50 @@ class Game {
             //p1 is an object that calls the class "Account" and calls the method "changeCoins()"
             case 2:
                 player.getAccount().changeCoins(250);
-                System.out.println(text[5] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[5]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 3:
                 player.getAccount().changeCoins(-100);
-                System.out.println(text[6] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[6]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 4:
                 player.getAccount().changeCoins(100);
-                System.out.println(text[7] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[7]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 5:
                 player.getAccount().changeCoins(-20);
-                System.out.println(text[8] + text[4]+ " "  + player.getAccount().getCoins());
+                System.out.println(text[8]+ " " + text[4]+ " "  + player.getAccount().getCoins());
                 break;
             case 6:
                 player.getAccount().changeCoins(180);
-                System.out.println(text[9]+ text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[9]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 7:
                 player.getAccount().changeCoins(0);
-                System.out.println(text[10] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[10]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 8:
                 player.getAccount().changeCoins(-70);
-                System.out.println(text[11] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[11]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 9:
                 player.getAccount().changeCoins(60);
-                System.out.println(text[12] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[12]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 10:
                 player.getAccount().changeCoins(-80);
-                System.out.println(text[13] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[13]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 System.out.print(text[14]);
                 scan.nextLine();
                 Turn(player, dice1, dice2);
                 break;
             case 11:
                 player.getAccount().changeCoins(-50);
-                System.out.println(text[15] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[15]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 12:
                 player.getAccount().changeCoins(650);
-                System.out.println(text[16] + text[4]+ " " + player.getAccount().getCoins());
+                System.out.println(text[16]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             default:
                 System.out.println("Error");
