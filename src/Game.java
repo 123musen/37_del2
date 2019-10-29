@@ -19,8 +19,8 @@ class Game {
         String language = scan.nextLine();
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(
-                    (Main.class.getResourceAsStream("\\language\\"+ language.toUpperCase()+
-                            "\\"+ language.toLowerCase()+ ".txt"))));
+                    (getClass().getResourceAsStream( "language/"+ language.toUpperCase()+
+                            "/"+ language.toLowerCase()+ ".txt"))));
             //new FileInputStream
             int x = 0;
             for (String line;  (line = br.readLine()) != null;) {
