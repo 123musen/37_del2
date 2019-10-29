@@ -20,7 +20,6 @@ class Game {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (getClass().getResourceAsStream( "language/"+ language.toUpperCase()+
                             "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
-            //new FileInputStream
             int x = 0;
             for (String line;  (line = br.readLine()) != null;) {
                 text[x] = line;
