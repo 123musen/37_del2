@@ -1,80 +1,124 @@
+//Study group 37 CDIO part 2, last edited 21.10.2019
+//Sejr Abildgaard s195481
+//Silas Rindorf s195474
+//Betina Hansen s195389
+//Morten Kruuse s183681
+
+import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+class Game {
+    private String[] text = new String[20];
+    void Round() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Choose language: Danish, English, Spanish");
+        String language = scan.nextLine();
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(
+                    (getClass().getResourceAsStream( "language/"+ language.toUpperCase()+
+                            "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
+            int x = 0;
+            for (String line;  (line = br.readLine()) != null;) {
+                text[x] = line;
+                x++;
+            }
+            System.out.println(text[3]);
 
+            System.out.print(text[0] + " ");
+            Player p1 = new Player(scan.nextLine());
 
-public class Game {
-    public void Round() {
+            System.out.print(text[1] + " ");
+            Player p2 = new Player(scan.nextLine());
 
-        Scanner scan= new Scanner (System.in);
+            System.out.println(text[2]);
+            while (true) {
+                System.out.print("\n" + p1.getName() + " " + text[3]);
+                if (scan.nextLine().equalsIgnoreCase("Q")) {
+                    break;
+                }
+                Turn(p1);
+                if (Victory(p1)){
+                    return;
+                }
+                System.out.print("\n" + p2.getName() + " " + text[3]);
+                scan.nextLine();
+                Turn(p2);
+                if (Victory(p2)){
+                    return;
+                }
+                p1.swapDices(p2);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+    }
+    private boolean Victory(Player player){
+        boolean bool = player.getAccount().getCoins() >= 3000;
+        if (bool){
+            System.out.println(text[4]+ " " + player.getAccount().getCoins() + " " + text[17]);
+        }
+        return bool;
+    }
 
-        Dice d1 = new Dice(6);
-        Dice d2 = new Dice(6);
-
-        System.out.print("Input Player 1 name: ");
-        Player p1 = new Player(scan.nextLine());
-
-        System.out.print("Input Player 2 name: ");
-        Player p2 = new Player(scan.nextLine());
-
-        d1.rollDice();
-        d2.rollDice();
-
-
-        switch (d1.getEyes()+d2.getEyes()){
+    private void Turn(Player player) {
+        player.getDice()[0].rollDice();
+        player.getDice()[1].rollDice();
+        Scanner scan = new Scanner(System.in);
+        switch (player.getDice()[0].getEyes() + player.getDice()[1].getEyes()) {
+            //p1 is an object that calls the class "Account" and calls the method "changeCoins()"
             case 2:
-                p1.changeCoins(250);
-                System.out.print("Tower +250. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(250);
+                System.out.println(text[5]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 3:
-                p1.changeCoins(-100);
-                System.out.print("Crater -100. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(-100);
+                System.out.println(text[6]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 4:
-                p1.changeCoins(100);
-                System.out.print("Palace Gates +100. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(100);
+                System.out.println(text[7]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 5:
-                p1.changeCoins(-20);
-                System.out.print("Cold Desert -20. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(-20);
+                System.out.println(text[8]+ " " + text[4]+ " "  + player.getAccount().getCoins());
                 break;
-
             case 6:
-                p1.changeCoins(180);
-                System.out.print("Walled city +180. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(180);
+                System.out.println(text[9]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 7:
-                p1.changeCoins (0);
-                System.out.print("Monastary 0. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(0);
+                System.out.println(text[10]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 8:
-                p1.changeCoins(-70);
-                System.out.print("Black Cave -70. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(-70);
+                System.out.println(text[11]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 9:
-                p1.changeCoins(60);
-                System.out.print("Huts in the Mountain +60. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(60);
+                System.out.println(text[12]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 10:
-                p1.changeCoins(-80);
-                System.out.print("The Werewolf-Wall -80. Total coins: " + p1.getCoins());
-                System.out.println("roll again");
+                player.getAccount().changeCoins(-80);
+                System.out.println(text[13]+ " " + text[4]+ " " + player.getAccount().getCoins());
+                System.out.print(text[14]);
+                scan.nextLine();
+                Turn(player);
                 break;
-
             case 11:
-                p1.changeCoins(-50);
-                System.out.print("The Pit -50. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(-50);
+                System.out.println(text[15]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
-
             case 12:
-                p1.changeCoins(650);
-                System.out.print("Goldmine +650. Total coins: " + p1.getCoins());
+                player.getAccount().changeCoins(650);
+                System.out.println(text[16]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
+            default:
+                System.out.println("Error");
+
         }
     }
 }

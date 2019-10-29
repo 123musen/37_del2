@@ -34,14 +34,14 @@ public class Test {
         Player p1 = new Player(input.nextLine());
         System.out.println(p1.getName());
 
-        System.out.println(p1.getCoins());
+        System.out.println(p1.getAccount().getCoins());
         System.out.print("new coin: ");
-        p1.setCoins(input.nextInt());
-        System.out.println(p1.getCoins());
+        p1.getAccount().setCoins(input.nextInt());
+        System.out.println(p1.getAccount().getCoins());
 
         System.out.print("change coin: ");
-        p1.changeCoins(input.nextInt());
-        System.out.println(p1.getCoins());
+        p1.getAccount().changeCoins(input.nextInt());
+        System.out.println(p1.getAccount().getCoins());
 
 
 
