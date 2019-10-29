@@ -5,6 +5,7 @@
 //Morten Kruuse s183681
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -20,7 +21,7 @@ class Game {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (getClass().getResourceAsStream( "language/"+ language.toUpperCase()+
-                            "/"+ language.toLowerCase()+ ".txt"))));
+                            "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
             //new FileInputStream
             int x = 0;
             for (String line;  (line = br.readLine()) != null;) {
