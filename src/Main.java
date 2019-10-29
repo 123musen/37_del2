@@ -3,12 +3,9 @@
 //Silas Rindorf s195474
 //Betina Hansen s195389
 //Morten Kruuse s183681
-
 public class Main {
-
     public static void main(String[] args) {
         Game game = new Game();
         game.round();
     }
-
 }

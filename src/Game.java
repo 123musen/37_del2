@@ -3,7 +3,6 @@
 //Silas Rindorf s195474
 //Betina Hansen s195389
 //Morten Kruuse s183681
-
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.io.BufferedReader;
@@ -18,20 +17,16 @@ class Game {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (getClass().getResourceAsStream( "language/"+ language.toUpperCase()+
                             "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
-            //new FileInputStream
             int x = 0;
             for (String line;  (line = br.readLine()) != null;) {
                 text[x] = line;
                 x++;
             }
             System.out.println(text[3]);
-
             System.out.print(text[0] + " ");
             Player p1 = new Player(scan.nextLine());
-
             System.out.print(text[1] + " ");
             Player p2 = new Player(scan.nextLine());
-
             System.out.println(text[2]);
             while (true) {
                 System.out.print("\n" + p1.getName() + " " + text[3]);
@@ -61,7 +56,6 @@ class Game {
         }
         return bool;
     }
-
     private void turn(Player player) {
         player.getDice()[0].rollDice();
         player.getDice()[1].rollDice();
@@ -117,7 +111,6 @@ class Game {
                 break;
             default:
                 System.out.println("Error");
-
         }
     }
 }
