@@ -41,16 +41,29 @@ class Game {
             while (true) {
                 System.out.print("\n" + p1.getName() + " " + text[3]);
                 if (scan.nextLine().equalsIgnoreCase("Q")) {
-                    return;
+                    break;
                 }
                 Turn(p1, d1, d2);
+                if (Victory(p1)){
+                    break;
+                }
                 System.out.print("\n" + p2.getName() + " " + text[3]);
                 scan.nextLine();
                 Turn(p2, d1, d2);
+                if (Victory(p2)){
+                    break;
+                }
             }
-        } catch (Exception ignored) {
-            System.out.println("Error: " + ignored);
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
         }
+    }
+    private boolean Victory(Player player){
+        boolean bool = player.getAccount().getCoins() == 3000;
+        if (bool){
+            System.out.println(player.getName() + " " + text[17]);
+        }
+        return bool;
     }
 
     private void Turn(Player player, Dice dice1, Dice dice2) {
