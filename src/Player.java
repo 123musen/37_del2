@@ -18,8 +18,8 @@ public class Player {
     }
     public void swapDices(Player player){
         Dice[] temp = this.getDice();
-        this.setDice(player.getDice());
-        player.setDice(temp);
+        this.dice = player.getDice();
+        player.dice = temp;
     }
     private void setDice(Dice[] dice){
         this.dice = dice;
