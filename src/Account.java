@@ -6,8 +6,6 @@
 public class Account {
     //All players start with 1000 coins
     private int coins = 1000;
-    //constructor
-    public Account(){}
     //set coins to any value above 0
     public void setCoins(int coins){
         if(!(coins < 0) )this.coins = coins;
