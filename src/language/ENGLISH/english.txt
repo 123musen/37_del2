@@ -1,0 +1,18 @@
+Player 1's name:
+Player 2's name:
+Press "Q" to quit game
+Press enter for new turn
+You have:
+You land on the field "2" and see a tower with a chest filled with gold. You get 250 coins.
+You fall in a crater and have to pay a 100 coins for a healing potion.
+You arrived to Palace Gates and receive a gift consisting of a 100 coins.
+You're lost and find yourself in the Cold Dessert. You use 20 coins on a cap.
+You have found "Walled City". You receive 200 drinks, whereof you drink 20, and sell the rest for 180 coins.
+You find a monastary where you spend the night. No change in coins.
+You've fallen in the Black Cave. You pay a firefly 70 coins to show you the way out of the cave.
+You find some huts in the mountains where you sell your cap for 60 coins.
+You arrive to the Werewolf Wall. You burp and the werewolves wake up. You throw all of your meat worth 80 coins.
+Roll again (press enter).
+You find a pit with 50 zombies. You throw 50 coins to keep them occupied.
+You arrive to a goldmine and find gold worth 650 coins.
+coins and have won!
