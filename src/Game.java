@@ -33,11 +33,11 @@ public class Game {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (getClass().getResourceAsStream( "language/" + language.toUpperCase()+
                             "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
-            int x = 0;
+            int temp = 0;
             //Take a line until there is no lines in text document, save each line in the String array
             for (String line;  (line = br.readLine()) != null;) {
-                text[x] = line;
-                x++;
+                text[temp] = line;
+                temp++;
             }
             //Ask players for player 1's name
             System.out.print(text[0] + " ");
@@ -84,6 +84,7 @@ public class Game {
     public String toString(){
         return "Class Game This object is used to call method \"round\"";
     }
+    //Method for checking if a Player has won
     private boolean victory(Player player){
         boolean bool = player.getAccount().getCoins() >= 3000;
         if (bool){
@@ -91,12 +92,15 @@ public class Game {
         }
         return bool;
     }
+    //Roll for a player
     private void turn(Player player) {
+        //Roll dices
         player.getDice()[0].rollDice();
         player.getDice()[1].rollDice();
-        Scanner scan = new Scanner(System.in);
+        //Find what the player rolled
         switch (player.getDice()[0].getEyes() + player.getDice()[1].getEyes()) {
-            //p1 is an object that calls the class "Game.Game.Account" and calls the method "changeCoins()"
+            //player is an object that calls the class "Account" and calls the method "changeCoins()"
+            //text is then written out with the players total amount of coins
             case 2:
                 player.getAccount().changeCoins(250);
                 System.out.println(text[5]+ " " + text[4]+ " " + player.getAccount().getCoins());
@@ -130,10 +134,15 @@ public class Game {
                 System.out.println(text[12]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
             case 10:
+                //New scanner for later
+                Scanner scan = new Scanner(System.in);
                 player.getAccount().changeCoins(-80);
                 System.out.println(text[13]+ " " + text[4]+ " " + player.getAccount().getCoins());
+                //Extra turn press enter
                 System.out.print(text[14]);
+                //Wait for input
                 scan.nextLine();
+                //Call itself for extra turn
                 turn(player);
                 break;
             case 11:
@@ -144,6 +153,7 @@ public class Game {
                 player.getAccount().changeCoins(650);
                 System.out.println(text[16]+ " " + text[4]+ " " + player.getAccount().getCoins());
                 break;
+                //If the dices manage to be above 12 or less than 2
             default:
                 System.out.println("Error");
         }
