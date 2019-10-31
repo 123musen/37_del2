@@ -1,5 +1,5 @@
-Type Player 1's name:
-Type Player 2's name:
+Player 1's name:
+Player 2's name:
 Press "Q" to quit game
 Press enter for new turn
 You have:
