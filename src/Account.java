@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 //Study group 37 CDIO part 2, last edited 29.10.2019
 //Sejr Abildgaard s195481
 //Silas Rindorf s195474
@@ -18,5 +20,9 @@ public class Account {
     }
     public int getCoins() {
         return coins;
+    }
+    @Override
+    public String toString(){
+        return "Class Account [coins: " + coins + "]";
     }
 }

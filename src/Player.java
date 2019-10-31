@@ -29,7 +29,7 @@ public class Player {
     public String getName(){
         return name;
     }
-    //returns a reference to class "Game.Account"
+    //returns a reference to class "Account"
     public Account getAccount(){
         return account;
     }
