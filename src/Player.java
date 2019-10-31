@@ -21,10 +21,6 @@ public class Player {
         this.dice = player.getDice();
         player.dice = temp;
     }
-    private void setDice(Dice[] dice){
-        this.dice = dice;
-    }
-    //
     public Dice[] getDice(){
         return dice;
     }
