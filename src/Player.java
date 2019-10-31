@@ -21,14 +21,14 @@ public class Player {
         this.setDice(player.getDice());
         player.setDice(temp);
     }
+    private void setDice(Dice[] dice){
+        this.dice = dice;
+    }
     //
     public Dice[] getDice(){
         return dice;
     }
     //Set current dice array to a new dice array
-    public void setDice(Dice[] dice){
-        this.dice = dice;
-    }
     //Return name for player
     public String getName(){
         return name;
@@ -40,6 +40,6 @@ public class Player {
     //Override the string to return name when object is called
     @Override
     public String toString(){
-        return name;
+        return "Class Player [name: " +  name + "]";
     }
 }

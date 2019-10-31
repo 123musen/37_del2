@@ -82,7 +82,7 @@ public class Game {
     //Override toString for if a Game object is written out
     @Override
     public String toString(){
-        return "This object is used to call round";
+        return "Class Game This object is used to call method \"round\"";
     }
     private boolean victory(Player player){
         boolean bool = player.getAccount().getCoins() >= 3000;
