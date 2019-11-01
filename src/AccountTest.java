@@ -14,6 +14,8 @@ public class AccountTest {
         Account account1 = new Account();
         account1.setCoins(2);
         assertEquals(2,account1.getCoins());
+        account1.setCoins(-40);
+        assertEquals(0,account1.getCoins());
     }
 
     @Test
