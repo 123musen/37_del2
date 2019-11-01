@@ -12,15 +12,32 @@ public class AccountTest {
     @Test
     public void setCoins() {
         Account account1 = new Account();
-        account1.setCoins(2);
-        assertEquals(2,account1.getCoins());
-        account1.setCoins(-40);
+        account1.setCoins(0);
+        assertEquals(0,account1.getCoins());
+
+        account1.setCoins(-1);
+        assertEquals(0,account1.getCoins());
+
+        account1.setCoins(0);
+        assertEquals(0,account1.getCoins());
+
+        account1.setCoins(1);
+        assertEquals(1,account1.getCoins());
+
+        account1.setCoins(100000);
+        assertEquals(100000,account1.getCoins());
+
+        account1.setCoins(-400000);
         assertEquals(0,account1.getCoins());
     }
 
     @Test
     public void changeCoins() {
         Account account2 = new Account();
+
+        account2.changeCoins(-2000);
+        assertEquals(0,account2.getCoins());
+
         account2.changeCoins(-2000);
         assertEquals(0,account2.getCoins());
     }
