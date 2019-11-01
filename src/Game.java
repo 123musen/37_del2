@@ -33,6 +33,7 @@ public class Game {
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (getClass().getResourceAsStream( "language/" + language.toUpperCase()+
                             "/"+ language.toLowerCase()+ ".txt")), StandardCharsets.UTF_8));
+            br.close();
             int temp = 0;
             //Take a line until there is no lines in text document, save each line in the String array
             for (String line;  (line = br.readLine()) != null;) {
