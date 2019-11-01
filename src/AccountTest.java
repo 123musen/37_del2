@@ -3,6 +3,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AccountTest {
+    @Test
+    public void testMultiple(){
+        for (int i = 0; i < 100000; i++) {
+            setCoins();
+            changeCoins();
+            getCoins();
+        }
+    }
 
     @Test
     public void setCoins() {
